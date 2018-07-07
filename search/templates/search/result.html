@@ -1,0 +1,15 @@
+{% extends "search/template.html" %}
+{% block title %}
+  Search-Result
+{% endblock title %}
+{% block body %}
+  {% if not found  %}
+    Sorry, We don't have
+  {% endif %}
+  <h1>Suggestions:</h1>
+  <ul>
+    {% for tuts in tutorials %}
+      <li><a href="{{ tuts['s'] }}">{{ tuts["f"] }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock body %}

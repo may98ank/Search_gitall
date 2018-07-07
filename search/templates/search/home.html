@@ -1,0 +1,12 @@
+{% extends "search/template.html" %}
+{% block title %}
+  Home-Search
+{% endblock title %}
+{% block body %}
+  <div class="container">
+    <form action="result" method="POST">{% csrf_token %}
+      <input type="text" name="symbol" placeholder="Tutorials">
+      <button type="submit" name="Search">Search</button>
+    </form>
+  </div>
+{% endblock body %}
